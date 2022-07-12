@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="ProjetISTA_1" Class="Add_venteDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=ADMIN;Initial Catalog=ProjetISTA_1;Integrated Security=True" SettingsObjectName="ProjetISTA.Properties.Settings" SettingsPropertyName="ProjetISTAConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.CMD_del1" Method="CMD_del1">
+    <Parameter Name="Id_vente" Parameter="id_vente" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CMD_Add1" Method="CMD_Add1">
+    <Parameter Name="Id_Cl" Parameter="id_Cl" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nom_Vd" Parameter="nom_Vd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Prix" Parameter="prix" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="DesCmd" Parameter="desCmd" Type="System.String" DbType="Text" />
+    <Parameter Name="DateCmd" Parameter="dateCmd" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="idproduit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Quantite" Parameter="quantite" Type="System.Int32" DbType="Int" />
+    <Parameter Name="totalvente" Type="System.Decimal" DbType="Money" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CMD_Add2" Method="CMD_Add2">
+    <Parameter Name="Id_Cl" Parameter="id_Cl" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Nom_Vd" Parameter="nom_Vd" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="Prix" Parameter="prix" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="DesCmd" Parameter="desCmd" Type="System.String" DbType="Text" />
+    <Parameter Name="DateCmd" Parameter="dateCmd" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="idproduit" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Quantite" Parameter="quantite" Type="System.Int32" DbType="Int" />
+    <Parameter Name="totalvente" Type="System.Decimal" DbType="Money" />
+    <Parameter Name="Sale" Parameter="sale" Type="System.String" DbType="Text" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

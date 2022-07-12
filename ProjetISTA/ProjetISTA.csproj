@@ -1,0 +1,418 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49BC49F9-DAB5-47EB-8950-CF638BB51E7C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ProjetISTA</RootNamespace>
+    <AssemblyName>ProjetISTA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video, Version=2.2.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.2.2.5\lib\AForge.Video.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow, Version=2.2.5.0, Culture=neutral, PublicKeyToken=61ea4348d43881b7, processorArchitecture=MSIL">
+      <HintPath>..\packages\AForge.Video.DirectShow.2.2.5\lib\AForge.Video.DirectShow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="AxShockwaveFlashObjects, Version=1.0.0.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="ClosedXML, Version=0.95.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.95.4\lib\net40\ClosedXML.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ComponentFactory.Krypton.Toolkit">
+      <HintPath>..\..\..\..\..\C#\Krypton-master\Bin\ComponentFactory.Krypton.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Guna.UI">
+      <HintPath>..\..\..\..\..\Desktop\Guna.UI-Framework-Lib-master\Guna.UI WinForms\.net 4.0\Guna.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2">
+      <HintPath>..\..\..\..\..\Desktop\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 3.5\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_vente.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Add_vente.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Ajouter_Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajouter_Commande.Designer.cs">
+      <DependentUpon>Ajouter_Commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajout_Client.Designer.cs">
+      <DependentUpon>Ajout_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Ajout_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ajout_Produit.Designer.cs">
+      <DependentUpon>Ajout_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="All_Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="All_Info.Designer.cs">
+      <DependentUpon>All_Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connect.cs" />
+    <Compile Include="CrystalReport1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Exportxlsx.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Exportxlsx.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Facture.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Facture.Designer.cs">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_Client.Designer.cs">
+      <DependentUpon>Gestion_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Commande.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_Commande.Designer.cs">
+      <DependentUpon>Gestion_Commande.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_Produit.Designer.cs">
+      <DependentUpon>Gestion_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_Utilisateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_Utilisateurs.Designer.cs">
+      <DependentUpon>Gestion_Utilisateurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Gestion_vente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Gestion_vente.Designer.cs">
+      <DependentUpon>Gestion_vente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image_Client.Designer.cs">
+      <DependentUpon>Image_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Image_Produit.Designer.cs">
+      <DependentUpon>Image_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LDS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LDS.Designer.cs">
+      <DependentUpon>LDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LGS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LGS.Designer.cs">
+      <DependentUpon>LGS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainApp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainApp.Designer.cs">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifie_Produit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifie_Produit.Designer.cs">
+      <DependentUpon>Modifie_Produit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifié_Client.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifié_Client.Designer.cs">
+      <DependentUpon>Modifié_Client.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modifié_Utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Modifié_Utilisateur.Designer.cs">
+      <DependentUpon>Modifié_Utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Nouveau_Utilisateur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Nouveau_Utilisateur.Designer.cs">
+      <DependentUpon>Nouveau_Utilisateur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile_User.Designer.cs">
+      <DependentUpon>Profile_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="ProjetISTADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProjetISTADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Add_vente.dbml.layout">
+      <DependentUpon>Add_vente.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Ajouter_Commande.resx">
+      <DependentUpon>Ajouter_Commande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajout_Client.resx">
+      <DependentUpon>Ajout_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ajout_Produit.resx">
+      <DependentUpon>Ajout_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="All_Info.resx">
+      <DependentUpon>All_Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Facture.resx">
+      <DependentUpon>Facture.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_Client.resx">
+      <DependentUpon>Gestion_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_Commande.resx">
+      <DependentUpon>Gestion_Commande.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_Produit.resx">
+      <DependentUpon>Gestion_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_Utilisateurs.resx">
+      <DependentUpon>Gestion_Utilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Gestion_vente.resx">
+      <DependentUpon>Gestion_vente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Client.resx">
+      <DependentUpon>Image_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Image_Produit.resx">
+      <DependentUpon>Image_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LDS.resx">
+      <DependentUpon>LDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LGS.resx">
+      <DependentUpon>LGS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainApp.resx">
+      <DependentUpon>MainApp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifie_Produit.resx">
+      <DependentUpon>Modifie_Produit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifié_Client.resx">
+      <DependentUpon>Modifié_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Modifié_Utilisateur.resx">
+      <DependentUpon>Modifié_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Nouveau_Utilisateur.resx">
+      <DependentUpon>Nouveau_Utilisateur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile_User.resx">
+      <DependentUpon>Profile_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Add_vente.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Add_vente.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Exportxlsx.xsc">
+      <DependentUpon>Exportxlsx.xsd</DependentUpon>
+    </None>
+    <None Include="Exportxlsx.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Exportxlsx.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Exportxlsx.xss">
+      <DependentUpon>Exportxlsx.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="ProjetISTADataSet.xsc">
+      <DependentUpon>ProjetISTADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ProjetISTADataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ProjetISTADataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ProjetISTADataSet.xss">
+      <DependentUpon>ProjetISTADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icons\arrow-right-from-bracket-solid.ico" />
+    <Content Include="Icons\icons8-accueil.ico" />
+    <Content Include="Icons\icons8-sac-d%27argent-livre-80.ico" />
+    <Content Include="Icons\sack-dollar-solid.ico" />
+    <Content Include="Icons\user-regular.ico" />
+    <Content Include="Icons\user-solid.ico" />
+    <Content Include="Icons\window-minimize-solid.ico" />
+    <Content Include="Icons\xmark-solid.ico" />
+    <Content Include="img\IllusLog.PNG" />
+    <Content Include="img\LoadingImage.PNG" />
+    <Content Include="img\LogoApp.png" />
+    <Content Include="img\PassEO.jpg" />
+    <Content Include="img\UserL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
