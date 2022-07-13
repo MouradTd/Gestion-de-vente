@@ -6,7 +6,7 @@ Author : AREJDAL MOURAD
 
 cahier de charge :
 
-L’Objectif de l’application est d’offrir au gérant de l’établissement un outil pour gérer les informations de son établissement et aux vendeur un moyen pour avoir l’information des produits aux stock.
+Le but de l’applicationest de fournir au gérant un outil pour gérer son établissement, et aux vendeur un moyen pour avoir l’information des produits et les prix de chaqu'un pour faciliter le processus d'achat.
 Application auro deux espaces d'authentification :
 1.Espace administrateur
 2.Espace vendeur
@@ -37,4 +37,3 @@ La gestion des Ventes :
 3.Modifier une vente
 4.Exporter les produits format Excel
 5.Imprimer la facture
-
